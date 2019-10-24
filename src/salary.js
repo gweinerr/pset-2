@@ -14,8 +14,8 @@ let ftax = (fedtax * ptx);
 let stax = (statetax * ptx);
 let sstax = (socsec * ptx);
 let mtax = (medtax * ptx);
-let totalTax = parseFloat(mtax) + parseFloat(sstax) + parseFloat(stax) + parseFloat(ftax) + parseFloat(preTax);
+let totalTax = mtax + sstax + stax + ftax + preTax;
 let thp = yrsal - totalTax
 
-thp = thp.toLocaleString(undefined, {maximumFractionDigits: 2, minimumFractionDigits: 2});
-console.log("\nYour take-home pay each check will be $" + parseFloat(thp) + ".\n");
+thp = (thp / 24).toLocaleString("en", {maximumFractionDigits: 2, minimumFractionDigits: 2});
+console.log("\nYour take-home pay each check will be $" + thp + ".\n");
