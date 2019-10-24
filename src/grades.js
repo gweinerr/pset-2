@@ -19,5 +19,8 @@ let hwavg = (parseFloat(hw1) + parseFloat(hw2) + parseFloat(hw3))/3;
 let qavg = (parseFloat(q1) + parseFloat(q2) + parseFloat(q3))/3;
 let tavg = (parseFloat(t1) + parseFloat(t2) + parseFloat(t3))/3;
 
-const grade = (hwavg * .15 + qavg * .35 + tavg * .5);
+const pchw = .15;
+const pcquiz = .35;
+const pctest = .5;
+const grade = (hwavg * pchw + qavg * pcquiz + tavg * pctest);
 console.log("\nYour marking period grade is " + parseFloat(grade).toFixed(2).toLocaleString() + "%.\n");
