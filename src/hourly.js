@@ -14,4 +14,4 @@ let wkhr = parseFloat(mon) + parseFloat(tues) + parseFloat(wed) + parseFloat(thu
 let pay = (wkhr * hrwg)
 
 pay = pay.toLocaleString(undefined, {maximumFractionDigits: 2, minimumFractionDigits: 2});
-console.log("\nYou'll make $" + pay + " this week.");
+console.log("\nYou'll make $" + pay + " this week.\n");
