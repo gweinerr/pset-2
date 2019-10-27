@@ -2,18 +2,18 @@ const readlineSync = require("readline-sync");
 
 const yrsal = readlineSync.question("\nAnnual salary: ");
 
-const fedtax = (0.157);
-const statetax = (0.0447);
-const contr = (0.07);
-const socsec = (0.062);
-const medtax = (0.0145);
+const FED_TAX = (0.157);
+const STATE_TAX = (0.0447);
+const CONTRIBUTION_TAX = (0.07);
+const SOCIAL_SECURITY = (0.062);
+const MED_TAX = (0.0145);
 
-let preTax = (contr * yrsal);
+let preTax = (CONTRIBUTION_TAX * yrsal);
 let ptx = (yrsal - preTax);
-let ftax = (fedtax * ptx);
-let stax = (statetax * ptx);
-let sstax = (socsec * ptx);
-let mtax = (medtax * ptx);
+let ftax = (FED_TAX * ptx);
+let stax = (STATE_TAX * ptx);
+let sstax = (SOCIAL_SECURITY * ptx);
+let mtax = (MED_TAX * ptx);
 let totalTax = mtax + sstax + stax + ftax + preTax;
 let thp = yrsal - totalTax
 
