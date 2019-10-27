@@ -1,8 +1,10 @@
 const readlineSync = require("readline-sync");
 
-const widthInches = readlineSync.question("\nWidth: ");
-const lengthInches = readlineSync.question("Length: ");
+let widthInches = Number(readlineSync.question("\nWidth: "));
+let lengthInches = Number(readlineSync.question("Length: "));
+
 const INCHES_TO_MILLIMETERS = 25.4;
+
 let widthMillimeters = widthInches * INCHES_TO_MILLIMETERS;
 let lengthMillimeters = lengthInches * INCHES_TO_MILLIMETERS;
 let area = widthMillimeters * lengthMillimeters;

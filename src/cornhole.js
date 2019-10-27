@@ -1,11 +1,11 @@
 const readlineSync = require("readline-sync");
 
-const length = 48;
-const width = 24;
-const diameter = 6;
+const LENGTH = 48;
+const WIDTH = 24;
+const DIAMETER = 6;
 
-let rectangleSA =  (length * width);
-let holeSA = Math.pow((diameter/2),2) * Math.PI;
+let rectangleSA =  (LENGTH * WIDTH);
+let holeSA = Math.pow((DIAMETER/2),2) * Math.PI;
 let totalSA = (rectangleSA - holeSA);
 
 
